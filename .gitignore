@@ -129,4 +129,5 @@ dist
 .yarn/install-state.gz
 .pnp.*
 
-secrets.ts
+dist
+secrets.*
