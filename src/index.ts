@@ -19,28 +19,32 @@ const response = await fetch("https://api.openai.com/v1/chat/completions", {
                 "A knit cap is a piece of knitted headwear designed to provide warmth in cold weather."
                 "A hard hat is a type of helmet predominantly used in workplace environments such as industrial or construction sites to protect the head from injury due to falling objects, impact with other objects, debris, rain, and electric shock."
                 "A cowboy hat is a high-crowned, wide-brimmed hat best known as the defining piece of attire for the North American cowboy."
-                Answer should be a JSON array: {
-                "$schema": "http://json-schema.org/draft-04/schema#",
-                "type": "object",
-                "properties": {
-                    "hat": {
+                Answer should be:{
+    "$schema": "http://json-schema.org/draft-04/schema#",
+    "type": "array",
+    "items": [
+        {
+            "type": "object",
+            "properties": {
+                "hat": {
                     "type": "string"
-                    },
-                    "description": {
+                },
+                "description": {
                     "type": "string"
-                    },
-                    "color": {
+                },
+                "color": {
                     "type": "string",
                     "pattern": "^[^\s]+$"
-                    }
-                },
-                "required": [
-                    "hat",
-                    "description",
-                    "color"
-                ]
                 }
-                `,
+            },
+            "required": [
+                "hat",
+                "description",
+                "color"
+            ]
+        }
+    ]
+}`,
             }, {
                 "role": "user",
                 "content": "I want the kind of hat not worn by Johnny Depp."
@@ -49,4 +53,5 @@ const response = await fetch("https://api.openai.com/v1/chat/completions", {
     }),
 });
 
-console.log(util.inspect(await response.json(), { showHidden: true, depth: null, colors: true }));
+// console.log(util.inspect((await response.json()), { showHidden: true, depth: null, colors: true }));
+console.log((await response.json()).choices[0].message.content);
