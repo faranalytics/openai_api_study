@@ -1,4 +1,4 @@
-import { DEAFULT_PROJECT_SERVICE_ACCOUNT_KEY } from "./secrets.js";
+import { DEFAULT_PROJECT_SERVICE_ACCOUNT_KEY } from "./secrets.js";
 import * as util from "node:util";
 import * as openai from "openai";
 
@@ -6,7 +6,7 @@ const response = await fetch("https://api.openai.com/v1/chat/completions", {
     method: "POST",
     "headers": {
         "Content-Type": "application/json",
-        "Authorization": `Bearer ${DEAFULT_PROJECT_SERVICE_ACCOUNT_KEY}`,
+        "Authorization": `Bearer ${DEFAULT_PROJECT_SERVICE_ACCOUNT_KEY}`,
     },
     body: JSON.stringify({
         "model": "gpt-4o-mini",
