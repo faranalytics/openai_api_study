@@ -1,4 +1,4 @@
-# Open AI API Study
+# OpenAI API Study
 
 ## Introduction
 
