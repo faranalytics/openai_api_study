@@ -20,6 +20,10 @@ Whatever comes to mind.
 
 JSON Schema seems to be helpful in producing structured and specific responses.
 
+### Indentation
+
+Proper indentation seems to produce a more precise result.
+
 ## Discussion
 
 ## Bibliography
