@@ -1,1 +1,11 @@
-# openai_api_study
+# Open AI API Study
+
+## Introduction
+
+## Materials
+
+## Methods
+
+## Results
+
+## Discussion
