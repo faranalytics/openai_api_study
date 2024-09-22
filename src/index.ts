@@ -22,28 +22,35 @@ const response = await fetch("https://api.openai.com/v1/chat/completions", {
                 Answer is only a JSON array:{
                 "$schema": "http://json-schema.org/draft-04/schema#",
                 "type": "array",
-                "items": [
-                    {
-                        "type": "object",
-                        "properties": {
-                            "hat": {
-                                "type": "string"
-                            },
-                            "description": {
-                                "type": "string"
-                            },
-                            "color": {
-                                "type": "string"
-                                "pattern": "^[^\\s]+$"
-                            }
+                "minItems": 4,
+                "maxItems": 5,
+                "items": {
+                    "type": "object",
+                    "properties": {
+                        "hat": {
+                            "type": "string"
                         },
-                        "required": [
-                            "hat",
-                            "description",
-                            "color"
-                        ]
-                    }
-                ]
+                        "description": {
+                            "type": "string"
+                        },
+                        "hex_color": {
+                            "type": "number",
+                            "pattern": "^#\\w{6}$"
+                        },
+                        "color": {
+                            "type": "string",
+                            "pattern": "^[^\\s]+$"
+                        },
+                        "cool": {
+                            "type": "boolean"
+                        }
+                    },
+                    "required": [
+                        "hat",
+                        "description",
+                        "color"
+                    ]
+                }
             }
                 `,
             }, {
