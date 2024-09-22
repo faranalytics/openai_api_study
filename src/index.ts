@@ -22,8 +22,8 @@ const response = await fetch("https://api.openai.com/v1/chat/completions", {
                 Answer is only a JSON array:{
                 "$schema": "http://json-schema.org/draft-04/schema#",
                 "type": "array",
-                "minItems": 4,
-                "maxItems": 5,
+                "minItems": 1,
+                "maxItems": 1,
                 "items": {
                     "type": "object",
                     "properties": {
