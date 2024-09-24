@@ -28,8 +28,8 @@ Proper indentation seems to produce a more precise result.
 
 ## Bibliography
 
-https://en.wikipedia.org/wiki/Fedora
-https://en.wikipedia.org/wiki/Baseball_cap
-https://en.wikipedia.org/wiki/Knit_cap
-https://en.wikipedia.org/wiki/Hard_hat
-https://en.wikipedia.org/wiki/Cowboy_hat
+- https://en.wikipedia.org/wiki/Fedora
+- https://en.wikipedia.org/wiki/Baseball_cap
+- https://en.wikipedia.org/wiki/Knit_cap
+- https://en.wikipedia.org/wiki/Hard_hat
+- https://en.wikipedia.org/wiki/Cowboy_hat
